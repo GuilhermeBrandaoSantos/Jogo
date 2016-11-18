@@ -5,6 +5,8 @@
  */
 package jogo;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ricardo Mota
@@ -142,33 +144,21 @@ public class ViewThree extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int soma = 0;
+        Calculos calculos = new Calculos();     
         
         if(rbtnOculos.isSelected()){
-            ViewFim fim= new ViewFim();
-            fim.setVisible(true);
-            dispose();
-            soma = soma - 1;
-        }
-        else if(rbtnBola.isSelected()){
-            ViewFim fim= new ViewFim();
-            fim.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(0);
+        }else if(rbtnBola.isSelected()){
+            calculos.setValueSelected(0);
         }else if(rbtnBengala.isSelected()){
-            ViewFim fim= new ViewFim();
-            fim.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(0);
         }else if(rbtnCasaco.isSelected()){
-            ViewFim fim= new ViewFim();
-            fim.setVisible(true);
-            dispose();
-            soma = soma + 1;
-            
+            calculos.setValueSelected(1);
         }
+        ViewFim fim= new ViewFim();
+        fim.setVisible(true);
+        dispose();
+        JOptionPane.showMessageDialog(null,"Total de pontos: " + calculos.total);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rbtnBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnBolaActionPerformed

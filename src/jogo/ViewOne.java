@@ -5,7 +5,6 @@
  */
 package jogo;
 
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -136,7 +135,7 @@ public class ViewOne extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbtnVassoura)
                     .addComponent(rbtnOculos))
                 .addGap(29, 29, 29)
@@ -149,35 +148,20 @@ public class ViewOne extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        int soma = 0;
+        Calculos calculos = new Calculos();
         
         if(rbtnOculos.isSelected()){
-            ViewTwo two= new ViewTwo();
-            two.setVisible(true);
-            dispose();
-            soma = soma + 1;
-        }
-        else if(rbtnGuarda.isSelected()){
-            ViewTwo two= new ViewTwo();
-            two.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(1);
+        }else if(rbtnGuarda.isSelected()){
+            calculos.setValueSelected(0);
         }else if(rbtnVassoura.isSelected()){
-            ViewTwo two= new ViewTwo();
-            two.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(0);
         }else if(rbtnCasaco.isSelected()){
-            ViewTwo two= new ViewTwo();
-            two.setVisible(true);
-            dispose();
-            soma = soma - 1;            
+            calculos.setValueSelected(0);
         }
-        JOptionPane.showMessageDialog(null,"Soma = " + soma);
+        ViewTwo two= new ViewTwo();
+        two.setVisible(true);
+        dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

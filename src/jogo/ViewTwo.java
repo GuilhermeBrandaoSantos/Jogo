@@ -155,33 +155,20 @@ public class ViewTwo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int soma = 0;
+        Calculos calculos = new Calculos();
         
         if(rbtnOculos.isSelected()){
-            ViewThree three= new ViewThree();
-            three.setVisible(true);
-            dispose();
-            soma = soma - 1;
-        }
-        else if(rbtnGuarda.isSelected()){
-            ViewThree three= new ViewThree();
-            three.setVisible(true);
-            dispose();
-            soma = soma + 1;
-            
+            calculos.setValueSelected(0);
+        }else if(rbtnGuarda.isSelected()){
+            calculos.setValueSelected(1);
         }else if(rbtnBola.isSelected()){
-            ViewThree three= new ViewThree();
-            three.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(0);
         }else if(rbtnBengala.isSelected()){
-            ViewThree three= new ViewThree();
-            three.setVisible(true);
-            dispose();
-            soma = soma - 1;
-            
+            calculos.setValueSelected(0);
         }
+        ViewThree three = new ViewThree();
+        three.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rbtnGuardaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnGuardaActionPerformed
