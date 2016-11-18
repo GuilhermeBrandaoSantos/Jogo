@@ -17,7 +17,12 @@ public class ViewTwo extends javax.swing.JFrame {
     public ViewTwo() {
         initComponents();
     }
-
+    
+    public int valorTwo;
+    
+    public int getValor() {
+        return this.valorTwo;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -156,11 +161,13 @@ public class ViewTwo extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Calculos calculos = new Calculos();
+        ViewOne viewOne = new ViewOne();
         
         if(rbtnOculos.isSelected()){
             calculos.setValueSelected(0);
         }else if(rbtnGuarda.isSelected()){
             calculos.setValueSelected(1);
+            this.valorTwo = viewOne.getValor() + 1;
         }else if(rbtnBola.isSelected()){
             calculos.setValueSelected(0);
         }else if(rbtnBengala.isSelected()){
