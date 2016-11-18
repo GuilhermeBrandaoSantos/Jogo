@@ -5,6 +5,8 @@
  */
 package jogo;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ricardo Mota
@@ -18,10 +20,11 @@ public class ViewTwo extends javax.swing.JFrame {
         initComponents();
     }
     
-    public int valorTwo;
+    public int valorTotal;
     
-    public int getValor() {
-        return this.valorTwo;
+    public void setValor(int valor) {
+        this.valorTotal = valor;
+            JOptionPane.showMessageDialog(null,"SETOU " + this.valorTotal);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -161,13 +164,16 @@ public class ViewTwo extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Calculos calculos = new Calculos();
-        ViewOne viewOne = new ViewOne();
+        ViewThree viewThree = new ViewThree();
+        JOptionPane.showMessageDialog(null,"BOTAO " + this.valorTotal);
         
         if(rbtnOculos.isSelected()){
             calculos.setValueSelected(0);
         }else if(rbtnGuarda.isSelected()){
             calculos.setValueSelected(1);
-            this.valorTwo = viewOne.getValor() + 1;
+            this.setValor(this.valorTotal+1);
+            JOptionPane.showMessageDialog(null,"Total de pontos: " + this.valorTotal);
+            viewThree.setValor(this.valorTotal);
         }else if(rbtnBola.isSelected()){
             calculos.setValueSelected(0);
         }else if(rbtnBengala.isSelected()){

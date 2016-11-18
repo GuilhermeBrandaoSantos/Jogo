@@ -19,11 +19,11 @@ public class ViewThree extends javax.swing.JFrame {
     public ViewThree() {
         initComponents();
     }
+   
+    public int valorTotal;
     
-    public int valorThree;
-    
-    public int getValor() {
-        return this.valorThree;
+    public void setValor(int valor) {
+        this.valorTotal = valor;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -150,7 +150,6 @@ public class ViewThree extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Calculos calculos = new Calculos();   
-        ViewTwo viewTwo = new ViewTwo();
         
         if(rbtnOculos.isSelected()){
             calculos.setValueSelected(0);
@@ -160,12 +159,12 @@ public class ViewThree extends javax.swing.JFrame {
             calculos.setValueSelected(0);
         }else if(rbtnCasaco.isSelected()){
             calculos.setValueSelected(1);
-            this.valorThree = viewTwo.getValor() + 1;
+            this.valorTotal = this.valorTotal + 1;
         }
         ViewFim fim= new ViewFim();
         fim.setVisible(true);
         dispose();
-        JOptionPane.showMessageDialog(null,"Total de pontos: " + this.valorThree);
+        JOptionPane.showMessageDialog(null,"Total de pontos: " + this.valorTotal);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rbtnBolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnBolaActionPerformed

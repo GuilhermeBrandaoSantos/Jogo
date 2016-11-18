@@ -18,12 +18,6 @@ public class ViewOne extends javax.swing.JFrame {
     public ViewOne() {
         initComponents();
     }
-    
-    public int valorOne;
-    
-    public int getValor() {
-        return this.valorOne;
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -155,10 +149,11 @@ public class ViewOne extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Calculos calculos = new Calculos();
+        ViewTwo viewTwo = new ViewTwo();
         
         if(rbtnOculos.isSelected()){
             calculos.setValueSelected(1);
-            this.valorOne = 1;
+            viewTwo.setValor(1);
         }else if(rbtnGuarda.isSelected()){
             calculos.setValueSelected(0);
         }else if(rbtnVassoura.isSelected()){
@@ -168,7 +163,7 @@ public class ViewOne extends javax.swing.JFrame {
         }
         ViewTwo two= new ViewTwo();
         two.setVisible(true);
-        dispose();
+        //dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
