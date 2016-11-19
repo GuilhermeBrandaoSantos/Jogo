@@ -31,7 +31,7 @@ public class ViewOne extends javax.swing.JFrame {
         Opcoes = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LabelGuardaChuva = new javax.swing.JLabel();
         lblCasaco = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -55,7 +55,8 @@ public class ViewOne extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guarda-chuva-op.png"))); // NOI18N
+        LabelGuardaChuva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/guarda-chuva-op.png"))); // NOI18N
+        LabelGuardaChuva.setName("testeteste"); // NOI18N
 
         lblCasaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/casaco-de-inverno.jpg"))); // NOI18N
 
@@ -86,7 +87,7 @@ public class ViewOne extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jLabel1)
+                .addComponent(LabelGuardaChuva)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblCasaco, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(65, 65, 65))
@@ -125,7 +126,7 @@ public class ViewOne extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblCasaco, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(LabelGuardaChuva))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbtnGuarda)
@@ -161,8 +162,10 @@ public class ViewOne extends javax.swing.JFrame {
         }else if(rbtnCasaco.isSelected()){
             calculos.setValueSelected(0);
         }
-        ViewTwo two= new ViewTwo();
-        two.setVisible(true);
+        
+        LabelGuardaChuva.setVisible(false);
+        //ViewTwo two= new ViewTwo();
+        //two.setVisible(true);
         //dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -207,9 +210,9 @@ public class ViewOne extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelGuardaChuva;
     private javax.swing.ButtonGroup Opcoes;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

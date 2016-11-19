@@ -20,11 +20,15 @@ public class ViewTwo extends javax.swing.JFrame {
         initComponents();
     }
     
-    public int valorTotal;
+    private int valorTotal;
     
     public void setValor(int valor) {
         this.valorTotal = valor;
             JOptionPane.showMessageDialog(null,"SETOU " + this.valorTotal);
+    }
+    
+    public int getValue(){
+        return this.valorTotal;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -165,7 +169,7 @@ public class ViewTwo extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Calculos calculos = new Calculos();
         ViewThree viewThree = new ViewThree();
-        JOptionPane.showMessageDialog(null,"BOTAO " + this.valorTotal);
+        JOptionPane.showMessageDialog(null,"BOTAO " + this.getValue());
         
         if(rbtnOculos.isSelected()){
             calculos.setValueSelected(0);
