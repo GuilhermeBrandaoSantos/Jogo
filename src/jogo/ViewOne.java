@@ -5,6 +5,8 @@
  */
 package jogo;
 
+import javax.swing.JLabel;
+
 
 /**
  *
@@ -17,6 +19,7 @@ public class ViewOne extends javax.swing.JFrame {
      */
     public ViewOne() {
         initComponents();
+        lblVassoura.setVisible(true);        
     }
 
     /**
@@ -29,22 +32,26 @@ public class ViewOne extends javax.swing.JFrame {
     private void initComponents() {
 
         Opcoes = new javax.swing.ButtonGroup();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lblOp1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         LabelGuardaChuva = new javax.swing.JLabel();
         lblCasaco = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblVassoura = new javax.swing.JLabel();
+        lblOculos = new javax.swing.JLabel();
         rbtnGuarda = new javax.swing.JRadioButton();
         rbtnCasaco = new javax.swing.JRadioButton();
         rbtnVassoura = new javax.swing.JRadioButton();
         rbtnOculos = new javax.swing.JRadioButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bengala-cartola.jpg"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Melhor opção para usar em um dia de SOL: ");
-        jLabel2.setToolTipText("");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+
+        lblOp1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblOp1.setText("Melhor opção para usar em um dia de SOL: ");
+        lblOp1.setToolTipText("");
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("Próximo");
@@ -60,9 +67,9 @@ public class ViewOne extends javax.swing.JFrame {
 
         lblCasaco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/casaco-de-inverno.jpg"))); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vassoura.jpg"))); // NOI18N
+        lblVassoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vassoura.jpg"))); // NOI18N
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/oculos-de-sol.png"))); // NOI18N
+        lblOculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/oculos-de-sol.png"))); // NOI18N
 
         Opcoes.add(rbtnGuarda);
         rbtnGuarda.setText("Guarda-Chuva");
@@ -93,7 +100,7 @@ public class ViewOne extends javax.swing.JFrame {
                 .addGap(65, 65, 65))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(lblOp1)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,13 +114,13 @@ public class ViewOne extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(49, 49, 49)
-                                .addComponent(jLabel4))
+                                .addComponent(lblVassoura))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(39, 39, 39)
                                 .addComponent(rbtnVassoura)))
                         .addGap(103, 103, 103)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
+                            .addComponent(lblOculos)
                             .addComponent(rbtnCasaco)
                             .addComponent(rbtnOculos))))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -122,7 +129,7 @@ public class ViewOne extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(7, 7, 7)
-                .addComponent(jLabel2)
+                .addComponent(lblOp1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblCasaco, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,8 +140,8 @@ public class ViewOne extends javax.swing.JFrame {
                     .addComponent(rbtnCasaco, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(lblOculos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblVassoura))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbtnVassoura)
@@ -164,6 +171,15 @@ public class ViewOne extends javax.swing.JFrame {
         }
         
         LabelGuardaChuva.setVisible(false);
+        lblCasaco.setVisible(true);
+        lblVassoura.setVisible(true);
+        lblOculos.setVisible(false);
+        
+        //rbtnOculos.setVisible(false);
+        //rbtnCasaco.setVisible(false);
+        //rbtnVassoura.setVisible(false);
+        //rbtnGuarda.setVisible(false);
+        
         //ViewTwo two= new ViewTwo();
         //two.setVisible(true);
         //dispose();
@@ -213,10 +229,11 @@ public class ViewOne extends javax.swing.JFrame {
     private javax.swing.JLabel LabelGuardaChuva;
     private javax.swing.ButtonGroup Opcoes;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblCasaco;
+    private javax.swing.JLabel lblOculos;
+    private javax.swing.JLabel lblOp1;
+    private javax.swing.JLabel lblVassoura;
     private javax.swing.JRadioButton rbtnCasaco;
     private javax.swing.JRadioButton rbtnGuarda;
     private javax.swing.JRadioButton rbtnOculos;
