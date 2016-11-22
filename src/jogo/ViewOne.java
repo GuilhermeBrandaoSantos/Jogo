@@ -156,33 +156,28 @@ public class ViewOne extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Calculos calculos = new Calculos();
         ViewTwo viewTwo = new ViewTwo();
         
         if(rbtnOculos.isSelected()){
-            calculos.setValueSelected(1);
             viewTwo.setValor(1);
         }else if(rbtnGuarda.isSelected()){
-            calculos.setValueSelected(0);
         }else if(rbtnVassoura.isSelected()){
-            calculos.setValueSelected(0);
         }else if(rbtnCasaco.isSelected()){
-            calculos.setValueSelected(0);
         }
         
-        LabelGuardaChuva.setVisible(false);
-        lblCasaco.setVisible(true);
-        lblVassoura.setVisible(true);
-        lblOculos.setVisible(false);
+//        LabelGuardaChuva.setVisible(false);
+//        lblCasaco.setVisible(true);
+//        lblVassoura.setVisible(true);
+//        lblOculos.setVisible(false);
         
         //rbtnOculos.setVisible(false);
         //rbtnCasaco.setVisible(false);
         //rbtnVassoura.setVisible(false);
         //rbtnGuarda.setVisible(false);
         
-        //ViewTwo two= new ViewTwo();
-        //two.setVisible(true);
-        //dispose();
+        ViewTwo two= new ViewTwo();;
+        two.setVisible(true);
+        dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

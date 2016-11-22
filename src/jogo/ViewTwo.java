@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Ricardo Mota
  */
 public class ViewTwo extends javax.swing.JFrame {
-
+    public int valorTotal;
     /**
      * Creates new form ViewTwo
      */
@@ -20,11 +20,11 @@ public class ViewTwo extends javax.swing.JFrame {
         initComponents();
     }
     
-    private int valorTotal;
+   
     
     public void setValor(int valor) {
         this.valorTotal = valor;
-            JOptionPane.showMessageDialog(null,"SETOU " + this.valorTotal);
+        JOptionPane.showMessageDialog(null,"SETOU " + this.valorTotal);
     }
     
     public int getValue(){
@@ -167,25 +167,22 @@ public class ViewTwo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Calculos calculos = new Calculos();
+        JOptionPane.showMessageDialog(null,"next " + this.valorTotal);
+
         ViewThree viewThree = new ViewThree();
-        JOptionPane.showMessageDialog(null,"BOTAO " + this.getValue());
+//        JOptionPane.showMessageDialog(null,"BOTAO " + this.getValue());;
         
         if(rbtnOculos.isSelected()){
-            calculos.setValueSelected(0);
         }else if(rbtnGuarda.isSelected()){
-            calculos.setValueSelected(1);
             this.setValor(this.valorTotal+1);
             JOptionPane.showMessageDialog(null,"Total de pontos: " + this.valorTotal);
             viewThree.setValor(this.valorTotal);
         }else if(rbtnBola.isSelected()){
-            calculos.setValueSelected(0);
         }else if(rbtnBengala.isSelected()){
-            calculos.setValueSelected(0);
         }
-        ViewThree three = new ViewThree();
-        three.setVisible(true);
-        dispose();
+//        ViewThree three = new ViewThree();
+//        three.setVisible(true);
+//        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void rbtnGuardaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnGuardaActionPerformed
